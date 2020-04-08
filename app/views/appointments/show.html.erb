@@ -1,0 +1,4 @@
+Dr. <%=link_to @appointment.doctor.name, doctor_path(@appointment.doctor_id)%> of the 
+<%=@appointment.doctor.department%> Department 
+has an appointment with <%= link_to @appointment.patient.name, patient_path(@appointment.patient_id)%>  
+on <%=@appointment.appointment_datetime.strftime("%B %-d, %Y")%> at <%=@appointment.appointment_datetime.strftime("%k:%M")%>
